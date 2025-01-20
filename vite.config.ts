@@ -9,13 +9,18 @@ export default defineConfig(({ mode }) => ({
   publicDir: "public",
   build: {
     outDir: "dist",
-    assetsDir: "assets",
+    assetsDir: "",
+    copyPublicDir: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined,
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && /\.(gif|jpe?g|png|svg)$/i.test(assetInfo.name)) {
+            return `lovable-uploads/[name][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
       },
     },
-    assetsInlineLimit: 0,
   },
   server: {
     host: "::",
