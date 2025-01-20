@@ -1,4 +1,4 @@
-import { useLanguage } from "@/hooks/useLanguage";
+import { useState } from "react";
 import { content } from "@/constants/content";
 import heroImage from "@/assets/a338b15d-845e-46e5-b409-6a7e79b38d2a.png";
 
@@ -12,7 +12,7 @@ interface HeroProps {
 }
 
 export const Hero = () => {
-  const { language } = useLanguage();
+  const [language, setLanguage] = useState<"ja" | "en">("ja");
 
   return (
     <section className="mb-12">
@@ -32,6 +32,12 @@ export const Hero = () => {
           <p className={`text-xl md:text-2xl lg:text-3xl max-w-3xl ${language === "ja" ? "font-yugothic" : "font-noto"}`}>
             {content.description}
           </p>
+          <button 
+            onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
+            className="mt-4 px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors"
+          >
+            {language === "ja" ? "English" : "日本語"}
+          </button>
         </div>
       </div>
     </section>

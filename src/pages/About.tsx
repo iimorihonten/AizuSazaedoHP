@@ -195,6 +195,14 @@ const About = () => {
         </div>
       </main>
       <Footer language={language} />
+      <div className="flex justify-end mb-4">
+        <button 
+          onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
+          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors"
+        >
+          {language === "ja" ? "English" : "日本語"}
+        </button>
+      </div>
     </div>
   );
 };
