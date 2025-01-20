@@ -19,13 +19,13 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name ? path.parse(assetInfo.name) : { ext: '', name: 'unknown' };
           if (/\.(gif|jpe?g|png|svg)$/i.test(info.ext)) {
-            return `assets/images/[name]${info.ext}`;
+            return `assets/images/${info.name}${info.ext}`;
           }
           return `assets/[name]-[hash]${info.ext}`;
         },
       },
     },
-    assetsInlineLimit: 4096, // 4kb
+    assetsInlineLimit: 0, // Disable inline assets
   },
   server: {
     host: "::",
@@ -35,4 +35,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
+  optimizeDeps: {
+    include: ['@/assets/*'],
+  },
 }));
