@@ -39,11 +39,19 @@ jobs:
           CI: false
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: Prepare assets
+      - name: Debug dist directory
         run: |
+          echo "Contents of dist directory:"
+          ls -la dist/
+          echo "\nContents of dist/lovable-uploads:"
+          ls -la dist/lovable-uploads || echo "lovable-uploads directory not found"
+          echo "\nContents of public directory:"
+          ls -la public/
+          echo "\nCopying assets..."
           mkdir -p dist/lovable-uploads
-          cp -r public/lovable-uploads/* dist/lovable-uploads/ || echo "No assets to copy"
-          ls -la dist/lovable-uploads || echo "Directory not accessible"
+          cp -rv public/lovable-uploads/* dist/lovable-uploads/
+          echo "\nFinal contents of dist/lovable-uploads:"
+          ls -la dist/lovable-uploads/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
