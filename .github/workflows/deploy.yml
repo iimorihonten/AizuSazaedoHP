@@ -39,9 +39,11 @@ jobs:
           CI: false
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: Copy assets
+      - name: Prepare assets
         run: |
-          cp -r public/lovable-uploads dist/ || true
+          mkdir -p dist/lovable-uploads
+          cp -r public/lovable-uploads/* dist/lovable-uploads/ || echo "No assets to copy"
+          ls -la dist/lovable-uploads || echo "Directory not accessible"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
