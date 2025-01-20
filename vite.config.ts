@@ -15,6 +15,9 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist",
     assetsDir: "assets",
     rollupOptions: {
+      input: {
+        index: path.resolve(__dirname, 'index.html'),
+      },
       output: {
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name ? path.parse(assetInfo.name) : { ext: '', name: 'unknown' };
@@ -26,6 +29,7 @@ export default defineConfig(({ mode }) => ({
       },
     },
     assetsInlineLimit: 0, // Disable inline assets
+    copyPublicDir: true,
   },
   server: {
     host: "::",
@@ -37,5 +41,8 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   optimizeDeps: {
     include: ['@/assets/*'],
+  },
+  css: {
+    devSourcemap: true,
   },
 }));
