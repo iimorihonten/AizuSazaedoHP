@@ -18,6 +18,6 @@ export const newsData: NewsItem[] = [
     contentEn: "We are pleased to announce the renewal of the Aizu Sazaedo official website.\n\nWe have redesigned the website to make it more visually appealing and user-friendly.\n\nThank you for your continued support of Aizu Sazaedo.",
     date: "2024-01-18",
     category: "important",
-    imageUrl: "./lovable-uploads/1698d386-50dd-44d9-a7f9-eca87d912f54.png"
+    imageUrl: "/AizuSazaedoHP/lovable-uploads/1698d386-50dd-44d9-a7f9-eca87d912f54.png"
   }
 ];
