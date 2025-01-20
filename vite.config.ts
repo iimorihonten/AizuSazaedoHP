@@ -6,6 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: "/AizuSazaedoHP/",
+  publicDir: "public",
   build: {
     outDir: "dist",
     assetsDir: "assets",
@@ -14,6 +15,7 @@ export default defineConfig(({ mode }) => ({
         manualChunks: undefined,
       },
     },
+    assetsInlineLimit: 0,
   },
   server: {
     host: "::",
