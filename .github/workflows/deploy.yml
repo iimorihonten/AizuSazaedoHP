@@ -19,10 +19,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          lfs: true
-
-      - name: Git LFS Pull
-        run: git lfs pull
       
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -43,9 +39,9 @@ jobs:
           CI: false
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: Copy public directory
+      - name: Copy assets
         run: |
-          cp -r public/* dist/
+          cp -r public/lovable-uploads dist/ || true
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
