@@ -35,23 +35,21 @@ jobs:
       - name: Build
         run: |
           npm run build
+          echo "Build exit code: $?"
         env:
           CI: false
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: Debug dist directory
+      - name: Debug build output
         run: |
-          echo "Contents of dist directory:"
+          echo "Current directory:"
+          pwd
+          echo "\nContents of dist directory:"
           ls -la dist/
-          echo "\nContents of dist/lovable-uploads:"
-          ls -la dist/lovable-uploads || echo "lovable-uploads directory not found"
-          echo "\nContents of public directory:"
-          ls -la public/
-          echo "\nCopying assets..."
-          mkdir -p dist/lovable-uploads
-          cp -rv public/lovable-uploads/* dist/lovable-uploads/
-          echo "\nFinal contents of dist/lovable-uploads:"
-          ls -la dist/lovable-uploads/
+          echo "\nContents of dist/assets:"
+          ls -la dist/assets || echo "No assets directory"
+          echo "\nVite build log:"
+          cat dist/vite-build-log.txt || echo "No build log found"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -6,21 +6,26 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: "/AizuSazaedoHP/",
-  publicDir: "public",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     outDir: "dist",
-    assetsDir: "",
-    copyPublicDir: true,
+    assetsDir: "assets",
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name && /\.(gif|jpe?g|png|svg)$/i.test(assetInfo.name)) {
-            return `lovable-uploads/[name][extname]`;
+          const info = assetInfo.name ? path.parse(assetInfo.name) : { ext: '', name: 'unknown' };
+          if (/\.(gif|jpe?g|png|svg)$/i.test(info.ext)) {
+            return `assets/images/[name]${info.ext}`;
           }
-          return `assets/[name]-[hash][extname]`;
+          return `assets/[name]-[hash]${info.ext}`;
         },
       },
     },
+    assetsInlineLimit: 4096, // 4kb
   },
   server: {
     host: "::",
@@ -30,9 +35,4 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
 }));
