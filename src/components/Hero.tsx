@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { content } from "@/constants/content";
-import heroImage from "@/assets/sazaedo-hero.jpg";
 
 interface HeroProps {
   language: "ja" | "en";
@@ -17,7 +16,7 @@ export const Hero = ({ language, content }: HeroProps) => {
         <img
           className="absolute inset-0 w-full h-full object-cover"
           alt="会津さざえ堂の外観"
-          src={heroImage}
+          src="https://raw.githubusercontent.com/iimorihonten/AizuSazaedoHP/main/src/assets/sazaedo-hero.jpg"
         />
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center p-4">
           <h2 className={`text-2xl md:text-3xl lg:text-4xl mb-6 ${language === "ja" ? "font-yumin" : "font-playfair"}`}>
