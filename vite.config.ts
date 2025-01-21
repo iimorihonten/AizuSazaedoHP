@@ -6,6 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: "/AizuSazaedoHP/",
+  publicDir: "public",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -13,23 +14,18 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist",
-    assetsDir: "assets",
+    assetsDir: "",
     rollupOptions: {
-      input: {
-        index: path.resolve(__dirname, 'index.html'),
-      },
       output: {
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name ? path.parse(assetInfo.name) : { ext: '', name: 'unknown' };
           if (/\.(gif|jpe?g|png|svg)$/i.test(info.ext)) {
-            return `assets/images/${info.name}${info.ext}`;
+            return `lovable-uploads/${info.name}${info.ext}`;
           }
           return `assets/[name]-[hash]${info.ext}`;
         },
       },
     },
-    assetsInlineLimit: 0, // Disable inline assets
-    copyPublicDir: true,
   },
   server: {
     host: "::",
@@ -39,10 +35,4 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
-  optimizeDeps: {
-    include: ['@/assets/*'],
-  },
-  css: {
-    devSourcemap: true,
-  },
 }));

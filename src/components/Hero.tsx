@@ -1,5 +1,5 @@
 import { useState } from "react";
-import heroImageSrc from "@/assets/a338b15d-845e-46e5-b409-6a7e79b38d2a.png";
+import heroImageSrc from "/AizuSazaedoHP/lovable-uploads/a338b15d-845e-46e5-b409-6a7e79b38d2a.png";
 import { content } from "@/constants/content";
 
 interface HeroProps {
