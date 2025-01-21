@@ -16,7 +16,7 @@ export const Hero = ({ language, content }: HeroProps) => {
         <img
           className="absolute inset-0 w-full h-full object-cover"
           alt="会津さざえ堂の外観"
-          src="/AizuSazaedoHP/sazaedo-hero.jpg"
+          src="/AizuSazaedoHP/images/sazaedo-hero.jpg"
           onError={(e) => {
             console.error("Hero image load error:", e);
             const img = e.target as HTMLImageElement;
