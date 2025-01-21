@@ -14,18 +14,6 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist",
-    assetsDir: "",
-    rollupOptions: {
-      output: {
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name ? path.parse(assetInfo.name) : { ext: '', name: 'unknown' };
-          if (/\.(gif|jpe?g|png|svg)$/i.test(info.ext)) {
-            return `lovable-uploads/${info.name}${info.ext}`;
-          }
-          return `assets/[name]-[hash]${info.ext}`;
-        },
-      },
-    },
   },
   server: {
     host: "::",

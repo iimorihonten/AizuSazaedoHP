@@ -40,22 +40,12 @@ jobs:
           CI: false
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: Detailed Debug of Build Output
+      - name: Debug build output
         run: |
-          echo "Current directory:"
-          pwd
-          echo "\nContents of src/assets:"
-          ls -la src/assets/
-          echo "\nContents of dist directory:"
+          echo "Contents of dist directory:"
           ls -la dist/
-          echo "\nContents of dist/assets:"
-          ls -la dist/assets/
-          echo "\nContents of dist/assets/images:"
-          ls -la dist/assets/images/ || echo "No images directory"
-          echo "\nChecking file types:"
-          file dist/assets/images/* || echo "No image files found"
-          echo "\nVite build log:"
-          cat dist/vite-build-log.txt || echo "No build log found"
+          echo "\nContents of dist/lovable-uploads:"
+          ls -la dist/lovable-uploads/
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
