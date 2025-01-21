@@ -16,39 +16,24 @@ import Autoplay from "embla-carousel-autoplay";
 const About = () => {
   const [language, setLanguage] = useState<"ja" | "en">("ja");
 
-  const seasonalImages = [
+  const images = [
     {
-      title: "二重らせん構造の天井",
-      description: "木製の梁に多数の寄進者の名前が書かれた札が貼られており、歴史と信仰の証が今も残されています。",
-      src: "lovable-uploads/sazaedo-ceiling.jpg",
-      alt: language === "ja" ? "会津さざえ堂の天井" : "Ceiling of Aizu Sazaedo",
-      season: language === "ja" ? "内部" : "Interior"
-    },
-    {
-      title: "会津さざえ堂について",
-      description: "会津さざえ堂は、1796年に建立された日本で唯一の二重らせん構造を持つ建築物です。",
-      src: "lovable-uploads/2025a941-5f31-406e-8837-6b8a0f8ca3a2.png",
+      src: "/lovable-uploads/2025a941-5f31-406e-8837-6b8a0f8ca3a2.png",
       alt: language === "ja" ? "冬の会津さざえ堂" : "Aizu Sazaedo in winter",
       season: language === "ja" ? "冬" : "Winter"
     },
     {
-      title: "建築の特徴",
-      description: "内部は二重らせん構造になっており、上り下りで異なる経路を通ることができます。",
-      src: "lovable-uploads/d9b564e9-1a79-4384-84bc-8d7a70d5c91a.png",
+      src: "/lovable-uploads/d9b564e9-1a79-4384-84bc-8d7a70d5c91a.png",
       alt: language === "ja" ? "春の会津さざえ堂" : "Aizu Sazaedo in spring",
       season: language === "ja" ? "春" : "Spring"
     },
     {
-      title: "歴史的価値",
-      description: "国の重要文化財に指定され、その独特な建築様式は多くの人々を魅了しています。",
-      src: "lovable-uploads/d48d85e3-d257-4a2a-a3d5-f3626b142cfd.png",
+      src: "/lovable-uploads/d48d85e3-d257-4a2a-a3d5-f3626b142cfd.png",
       alt: language === "ja" ? "夏の会津さざえ堂" : "Aizu Sazaedo in summer",
       season: language === "ja" ? "夏" : "Summer"
     },
     {
-      title: "参拝体験",
-      description: "らせん状の通路を上り下りすることで、独特の参拝体験ができます。",
-      src: "lovable-uploads/6d12c6c1-28cb-453c-ae2b-8565ba4bd240.png",
+      src: "/lovable-uploads/6d12c6c1-28cb-453c-ae2b-8565ba4bd240.png",
       alt: language === "ja" ? "秋の会津さざえ堂" : "Aizu Sazaedo in autumn",
       season: language === "ja" ? "秋" : "Autumn"
     }
@@ -71,7 +56,7 @@ const About = () => {
     },
     {
       title: "独特な構造",
-      content: "その独特な2重らせんのスロープに沿って西国三十三観音像が安置され、参拝者はこのお堂をお参りすることで三十三観音参りができるという大変合理的なお堂です。また、上りと下りが全く別の通路になっていいる一方通行の構造により、たくさんの参拝者がすれ違うこと無く安全にお参りができるという世界にも珍しい建築様式を採用したことで、建築史上その特異な存在が認められ、平成7年に国重要文化財に指定されました。"
+      content: "その独特な2重らせんのスロープに沿って西国三十三観音像が安置され、参拝者はこのお堂をお参りすることで三十三観音参りができるという大変合理的なお堂です。また、上りと下りが全く別の通路になっている一方通行の構造により、たくさんの参拝者がすれ違うこと無く安全にお参りができるという世界にも珍しい建築様式を採用したことで、建築史上その特異な存在が認められ、平成7年に国重要文化財に指定されました。"
     },
     {
       title: "三匝堂の意味",
@@ -145,7 +130,7 @@ const About = () => {
               className="w-full"
             >
               <CarouselContent>
-                {seasonalImages.map((image, index) => (
+                {images.map((image, index) => (
                   <CarouselItem key={index} className="flex flex-col items-center">
                     <img
                       src={image.src}
@@ -198,14 +183,6 @@ const About = () => {
         </div>
       </main>
       <Footer language={language} />
-      <div className="flex justify-end mb-4">
-        <button 
-          onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors"
-        >
-          {language === "ja" ? "English" : "日本語"}
-        </button>
-      </div>
     </div>
   );
 };
