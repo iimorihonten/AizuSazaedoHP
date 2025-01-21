@@ -18,6 +18,13 @@ const About = () => {
 
   const seasonalImages = [
     {
+      title: "二重らせん構造の天井",
+      description: "木製の梁に多数の寄進者の名前が書かれた札が貼られており、歴史と信仰の証が今も残されています。",
+      src: "lovable-uploads/sazaedo-ceiling.jpg",
+      alt: language === "ja" ? "会津さざえ堂の天井" : "Ceiling of Aizu Sazaedo",
+      season: language === "ja" ? "内部" : "Interior"
+    },
+    {
       title: "会津さざえ堂について",
       description: "会津さざえ堂は、1796年に建立された日本で唯一の二重らせん構造を持つ建築物です。",
       src: "lovable-uploads/2025a941-5f31-406e-8837-6b8a0f8ca3a2.png",
