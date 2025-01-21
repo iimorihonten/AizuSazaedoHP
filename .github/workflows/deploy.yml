@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -27,25 +25,12 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: |
-          npm install -g npm@latest
-          rm -rf node_modules package-lock.json
-          npm install
+        run: npm install
       
       - name: Build
-        run: |
-          npm run build
-          echo "Build exit code: $?"
-          # Copy public images to dist
-          cp -r public/images dist/
-          # Debug output
-          echo "Contents of dist directory:"
-          ls -la dist/
-          echo "\nContents of dist/images:"
-          ls -la dist/images/
+        run: npm run build
         env:
           CI: false
-          NODE_OPTIONS: "--max_old_space_size=4096"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
