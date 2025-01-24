@@ -3,37 +3,32 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { content } from "@/constants/content";
 import { QuestionForm } from "@/components/QuestionForm";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
+import { getImagePath } from "@/constants/config";
 
 const About = () => {
   const [language, setLanguage] = useState<"ja" | "en">("ja");
 
   const images = [
     {
-      src: "/AizuSazaedoHP/lovable-uploads/2025a941-5f31-406e-8837-6b8a0f8ca3a2.png",
+      src: getImagePath("/AizuSazaedoHP/lovable-uploads/2025a941-5f31-406e-8837-6b8a0f8ca3a2.png"),
       alt: language === "ja" ? "冬の会津さざえ堂" : "Aizu Sazaedo in winter",
       season: language === "ja" ? "冬" : "Winter"
     },
     {
-      src: "/AizuSazaedoHP/lovable-uploads/d9b564e9-1a79-4384-84bc-8d7a70d5c91a.png",
+      src: getImagePath("/AizuSazaedoHP/lovable-uploads/d9b564e9-1a79-4384-84bc-8d7a70d5c91a.png"),
       alt: language === "ja" ? "春の会津さざえ堂" : "Aizu Sazaedo in spring",
       season: language === "ja" ? "春" : "Spring"
     },
     {
-      src: "/AizuSazaedoHP/lovable-uploads/d48d85e3-d257-4a2a-a3d5-f3626b142cfd.png",
+      src: getImagePath("/AizuSazaedoHP/lovable-uploads/d48d85e3-d257-4a2a-a3d5-f3626b142cfd.png"),
       alt: language === "ja" ? "夏の会津さざえ堂" : "Aizu Sazaedo in summer",
       season: language === "ja" ? "夏" : "Summer"
     },
     {
-      src: "/AizuSazaedoHP/lovable-uploads/6d12c6c1-28cb-453c-ae2b-8565ba4bd240.png",
+      src: getImagePath("/AizuSazaedoHP/lovable-uploads/6d12c6c1-28cb-453c-ae2b-8565ba4bd240.png"),
       alt: language === "ja" ? "秋の会津さざえ堂" : "Aizu Sazaedo in autumn",
       season: language === "ja" ? "秋" : "Autumn"
     }
