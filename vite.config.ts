@@ -5,9 +5,12 @@ import path from "path";
 export default defineConfig(({ command }) => ({
   base: command === 'serve' ? '' : '/AizuSazaedoHP/',
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias: [
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, 'src')
+      }
+    ]
   },
   build: {
     outDir: "dist",
