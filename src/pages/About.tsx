@@ -18,22 +18,22 @@ const About = () => {
 
   const images = [
     {
-      src: "./lovable-uploads/2025a941-5f31-406e-8837-6b8a0f8ca3a2.png",
+      src: "/AizuSazaedoHP/lovable-uploads/2025a941-5f31-406e-8837-6b8a0f8ca3a2.png",
       alt: language === "ja" ? "冬の会津さざえ堂" : "Aizu Sazaedo in winter",
       season: language === "ja" ? "冬" : "Winter"
     },
     {
-      src: "./lovable-uploads/d9b564e9-1a79-4384-84bc-8d7a70d5c91a.png",
+      src: "/AizuSazaedoHP/lovable-uploads/d9b564e9-1a79-4384-84bc-8d7a70d5c91a.png",
       alt: language === "ja" ? "春の会津さざえ堂" : "Aizu Sazaedo in spring",
       season: language === "ja" ? "春" : "Spring"
     },
     {
-      src: "./lovable-uploads/d48d85e3-d257-4a2a-a3d5-f3626b142cfd.png",
+      src: "/AizuSazaedoHP/lovable-uploads/d48d85e3-d257-4a2a-a3d5-f3626b142cfd.png",
       alt: language === "ja" ? "夏の会津さざえ堂" : "Aizu Sazaedo in summer",
       season: language === "ja" ? "夏" : "Summer"
     },
     {
-      src: "./lovable-uploads/6d12c6c1-28cb-453c-ae2b-8565ba4bd240.png",
+      src: "/AizuSazaedoHP/lovable-uploads/6d12c6c1-28cb-453c-ae2b-8565ba4bd240.png",
       alt: language === "ja" ? "秋の会津さざえ堂" : "Aizu Sazaedo in autumn",
       season: language === "ja" ? "秋" : "Autumn"
     }
