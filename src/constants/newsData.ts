@@ -20,13 +20,13 @@ export const newsData: NewsItem[] = [
     contentEn: "We are pleased to announce the renewal of the Aizu Sazaedo official website.\n\nWe have redesigned the website to make it more visually appealing and user-friendly.\n\nThank you for your continued support of Aizu Sazaedo.",
     date: "2025-02-01",
     category: "important",
-    imageUrl: getImagePath("/AizuSazaedoHP/lovable-uploads/1698d386-50dd-44d9-a7f9-eca87d912f54.png")
+    imageUrl: getImagePath("/lovable-uploads/1698d386-50dd-44d9-a7f9-eca87d912f54.png")
   },
   {
     id: "2",
     title: "会津さざえ堂の春の風景",
     date: "2024-03-15",
     content: "桜の季節が近づいてきました。会津さざえ堂周辺の桜も徐々に蕾が膨らみ始めています。",
-    imageUrl: getImagePath("/AizuSazaedoHP/lovable-uploads/1698d386-50dd-44d9-a7f9-eca87d912f54.png")
+    imageUrl: getImagePath("/lovable-uploads/1698d386-50dd-44d9-a7f9-eca87d912f54.png")
   }
 ];

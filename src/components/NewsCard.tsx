@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { format } from "date-fns";
 import { ja } from "date-fns/locale";
-import { NewsItem } from "@/constants/newsData";
+import { NewsItem } from "../constants/newsData";
 
 interface NewsCardProps {
   news: NewsItem;
@@ -22,13 +22,16 @@ const getCategoryColor = (category: NewsItem["category"]) => {
 };
 
 const getCategoryText = (category: NewsItem["category"], language: "ja" | "en") => {
-  const categories = {
-    event: { ja: "イベント", en: "Event" },
-    maintenance: { ja: "メンテナンス", en: "Maintenance" },
-    important: { ja: "重要", en: "Important" },
-    other: { ja: "その他", en: "Other" }
-  };
-  return categories[category][language];
+  switch (category) {
+    case "event":
+      return language === "ja" ? "イベント" : "Event";
+    case "maintenance":
+      return language === "ja" ? "メンテナンス" : "Maintenance";
+    case "important":
+      return language === "ja" ? "重要" : "Important";
+    default:
+      return language === "ja" ? "その他" : "Other";
+  }
 };
 
 export const NewsCard = ({ news, language }: NewsCardProps) => {
