@@ -2,8 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-export default defineConfig({
-  base: "/AizuSazaedoHP/",
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '' : '/AizuSazaedoHP/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -13,4 +13,4 @@ export default defineConfig({
     outDir: "dist",
   },
   plugins: [react()],
-});
+}));
