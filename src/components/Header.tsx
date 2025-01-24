@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
+import { Button } from "./ui/button";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "./ui/navigation-menu";
 import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
