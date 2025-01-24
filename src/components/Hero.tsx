@@ -12,7 +12,7 @@ export const Hero = ({ language, content }: HeroProps) => {
     <section className="mb-12">
       <div className="relative aspect-square rounded-lg overflow-hidden bg-black max-w-3xl mx-auto">
         <img
-          src="/lovable-uploads/a338b15d-845e-46e5-b409-6a7e79b38d2a.png"
+          src="./lovable-uploads/a338b15d-845e-46e5-b409-6a7e79b38d2a.png"
           alt={content.title}
           className="w-full h-full object-cover animate-[spin_40s_linear_infinite]"
         />
