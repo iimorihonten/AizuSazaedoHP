@@ -1,4 +1,4 @@
-export const BASE_PATH = import.meta.env.MODE === 'development' ? '' : '/AizuSazaedoHP';
+export const BASE_PATH = import.meta.env.MODE === 'development' ? '.' : '/AizuSazaedoHP';
 
 export const getImagePath = (path: string) => {
   return `${BASE_PATH}${path}`;
