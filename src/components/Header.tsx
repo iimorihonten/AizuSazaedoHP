@@ -42,9 +42,19 @@ export const Header = ({ language, setLanguage, content }: HeaderProps) => {
 
   return (
     <header className="bg-[#808000] text-white shadow-sm">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="md:hidden absolute top-2 right-4">
+          <Button
+            variant="outline"
+            size="sm"
+            className="bg-white/10 text-white border-white hover:bg-white/20 hover:text-white"
+            onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
+          >
+            {language === "ja" ? "English" : "日本語"}
+          </Button>
+        </div>
         <div className="flex flex-col md:flex-row justify-between h-64 md:h-20">
-          <div className="flex flex-col items-center md:items-start justify-center">
+          <div className="flex flex-col items-center md:items-start justify-center pt-12 md:pt-0">
             <div className="text-sm md:text-base mb-1">{content.subtitle}</div>
             <h1 
               className={`text-xl md:text-3xl ${language === "ja" ? "font-yumin" : "font-playfair"} cursor-pointer`}
@@ -73,7 +83,7 @@ export const Header = ({ language, setLanguage, content }: HeaderProps) => {
             
             <Button
               variant="outline"
-              className="bg-white/10 text-white border-white hover:bg-white/20 hover:text-white"
+              className="bg-white/10 text-white border-white hover:bg-white/20 hover:text-white hidden md:inline-flex"
               onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
             >
               {language === "ja" ? "English" : "日本語"}
