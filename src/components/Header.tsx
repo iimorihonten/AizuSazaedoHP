@@ -43,7 +43,7 @@ export const Header = ({ language, setLanguage, content }: HeaderProps) => {
   return (
     <header className="bg-[#808000] text-white shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 md:h-20">
+        <div className="flex flex-col md:flex-row justify-between h-64 md:h-20">
           <div className="flex flex-col items-center md:items-start justify-center">
             <div className="text-sm md:text-base mb-1">{content.subtitle}</div>
             <h1 
@@ -54,7 +54,7 @@ export const Header = ({ language, setLanguage, content }: HeaderProps) => {
             </h1>
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
             <NavigationMenu>
               <NavigationMenuList className="flex gap-2 flex-wrap justify-center">
                 {Object.entries(content.menu).map(([key, value]) => (
