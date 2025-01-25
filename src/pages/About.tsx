@@ -174,8 +174,8 @@ const About = () => {
               ))}
             </CarouselContent>
             <div className="flex items-center justify-center gap-4 mt-4">
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="relative left-0 right-0 translate-x-0" />
+              <CarouselNext className="relative left-0 right-0 translate-x-0" />
             </div>
           </Carousel>
         </div>

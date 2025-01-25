@@ -3,6 +3,7 @@ export const content = {
     title: "会津さざえ堂",
     subtitle: "国指定重要文化財",
     description: "世界唯一\n二重螺旋構造の木造建築",
+    image: "https://iimorihonten.github.io/AizuSazaedoHP/lovable-uploads/a338b15d-845e-46e5-b409-6a7e79b38d2a.png",
     menu: {
       news: "お知らせ",
       about: "会津さざえ堂とは",
@@ -31,6 +32,7 @@ export const content = {
     title: "Aizu Sazaedo",
     subtitle: "Important Cultural Property of Japan",
     description: "World's Only\nDouble-helix Wooden Architecture",
+    image: "https://iimorihonten.github.io/AizuSazaedoHP/lovable-uploads/a338b15d-845e-46e5-b409-6a7e79b38d2a.png",
     menu: {
       news: "News",
       about: "About Aizu Sazaedo",
