@@ -2,7 +2,7 @@ export const content = {
   ja: {
     title: "会津さざえ堂",
     subtitle: "国指定重要文化財",
-    description: "世界で唯一の二重螺旋構造を持つ木造建築",
+    description: "世界唯一\n二重螺旋構造の木造建築",
     menu: {
       news: "お知らせ",
       about: "会津さざえ堂とは",
@@ -23,14 +23,14 @@ export const content = {
       },
       access: {
         title: "アクセス",
-        content: "会津若松市飯盛山3丁目\nJR会津若松駅からバスで15分",
+        content: "JR会津若松駅からバスで5分\n飯盛山下バス停下車 徒歩5分",
       },
     },
   },
   en: {
     title: "Aizu Sazaedo",
     subtitle: "Important Cultural Property of Japan",
-    description: "The World's Only Double-Helix Wooden Architecture",
+    description: "World's Only\nDouble-helix Wooden Architecture",
     menu: {
       news: "News",
       about: "About Aizu Sazaedo",
@@ -51,7 +51,7 @@ export const content = {
       },
       access: {
         title: "Access",
-        content: "3 Iimori-yama, Aizuwakamatsu City\n15 minutes by bus from JR Aizuwakamatsu Station",
+        content: "5 minutes by bus from JR Aizuwakamatsu Station\n5 minutes walk from Iimoriyama-shita Bus Stop",
       },
     },
   },

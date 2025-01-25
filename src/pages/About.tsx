@@ -2,7 +2,6 @@ import React, { useState, useMemo } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { content } from "@/constants/content";
-import { QuestionForm } from "@/components/QuestionForm";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
@@ -115,32 +114,43 @@ const About = () => {
         </h1>
 
         <div className="w-full max-w-4xl mx-auto">
-          <div className="mb-8">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[plugin]}
-              className="w-full"
-            >
-              <CarouselContent>
-                {images.map((image, index) => (
-                  <CarouselItem key={index} className="flex flex-col items-center">
-                    <img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-1/4 h-auto rounded-lg shadow-lg"
-                    />
-                    <p className={`mt-2 text-sm text-gray-600 ${language === "ja" ? "font-yumin" : "font-playfair"}`}>
-                      {image.season}
-                    </p>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+          <div className="mb-12">
+            <h2 className={`text-2xl font-bold mb-6 text-center ${language === "ja" ? "font-yumin" : "font-playfair"}`}>
+              {language === "ja" ? "四季の会津さざえ堂" : "Aizu Sazaedo in Four Seasons"}
+            </h2>
+            <div className="max-w-2xl mx-auto scale-80">
+              <Carousel
+                plugins={[plugin]}
+                className="w-full"
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+              >
+                <CarouselContent>
+                  {images.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <Card>
+                          <CardContent className="flex aspect-[4/3] items-center justify-center p-0 relative">
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute bottom-4 right-4 bg-black/50 text-white px-4 py-2 rounded-full">
+                              {image.season}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
+            </div>
           </div>
 
           <Carousel className="w-full">
@@ -171,10 +181,6 @@ const About = () => {
         </div>
 
         <div className="mt-16 mb-8">
-          <h2 className={`text-2xl font-bold mb-6 text-center ${language === "ja" ? "font-yumin" : "font-playfair"}`}>
-            {language === "ja" ? "お問い合わせ" : "Contact Us"}
-          </h2>
-          <QuestionForm language={language} />
         </div>
       </main>
       <Footer language={language} />

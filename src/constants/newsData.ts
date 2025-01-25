@@ -21,12 +21,5 @@ export const newsData: NewsItem[] = [
     date: "2025-02-01",
     category: "important",
     imageUrl: getImagePath("/lovable-uploads/1698d386-50dd-44d9-a7f9-eca87d912f54.png")
-  },
-  {
-    id: "2",
-    title: "会津さざえ堂の春の風景",
-    date: "2024-03-15",
-    content: "桜の季節が近づいてきました。会津さざえ堂周辺の桜も徐々に蕾が膨らみ始めています。",
-    imageUrl: getImagePath("/lovable-uploads/1698d386-50dd-44d9-a7f9-eca87d912f54.png")
   }
 ];
