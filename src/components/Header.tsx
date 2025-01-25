@@ -41,44 +41,46 @@ export const Header = ({ language, setLanguage, content }: HeaderProps) => {
   };
 
   return (
-    <header className="bg-[#808000] text-white p-4">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="flex flex-col items-center md:items-start">
-          <div className="text-sm md:text-base mb-1">{content.subtitle}</div>
-          <h1 
-            className={`text-2xl md:text-3xl ${language === "ja" ? "font-yumin" : "font-playfair"} cursor-pointer`}
-            onClick={() => navigate("/")}
-          >
-            {content.title}
-          </h1>
-        </div>
-        
-        <div className="flex items-center gap-4">
-          <NavigationMenu>
-            <NavigationMenuList className="flex gap-2 flex-wrap justify-center">
-              {Object.entries(content.menu).map(([key, value]) => (
-                <NavigationMenuItem key={key}>
-                  <Button
-                    variant="ghost"
-                    className="text-white hover:bg-white/20"
-                    onClick={() => handleNavigation(key)}
-                  >
-                    {value}
-                  </Button>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+    <header className="bg-white shadow-sm">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-12 md:h-16">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="text-sm md:text-base mb-1">{content.subtitle}</div>
+            <h1 
+              className={`text-2xl md:text-3xl ${language === "ja" ? "font-yumin" : "font-playfair"} cursor-pointer`}
+              onClick={() => navigate("/")}
+            >
+              {content.title}
+            </h1>
+          </div>
           
-          <Button
-            variant="outline"
-            className="bg-white/10 text-white border-white hover:bg-white/20 hover:text-white"
-            onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
-          >
-            {language === "ja" ? "English" : "日本語"}
-          </Button>
+          <div className="flex items-center gap-4">
+            <NavigationMenu>
+              <NavigationMenuList className="flex gap-2 flex-wrap justify-center">
+                {Object.entries(content.menu).map(([key, value]) => (
+                  <NavigationMenuItem key={key}>
+                    <Button
+                      variant="ghost"
+                      className="text-black hover:bg-white/20"
+                      onClick={() => handleNavigation(key)}
+                    >
+                      {value}
+                    </Button>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
+            
+            <Button
+              variant="outline"
+              className="bg-white/10 text-black border-black hover:bg-white/20 hover:text-black"
+              onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
+            >
+              {language === "ja" ? "English" : "日本語"}
+            </Button>
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
   );
 };

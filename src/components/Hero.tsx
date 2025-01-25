@@ -21,7 +21,7 @@ export const Hero = ({ language, content }: HeroProps) => {
             className="w-full h-full object-cover animate-[spin_40s_linear_infinite] opacity-80"
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center p-4">
-            <div className="absolute top-10 md:top-20 lg:top-32 right-1/2 transform translate-x-1/2 z-10">
+            <div className="absolute top-4 md:top-20 lg:top-32 right-1/2 transform translate-x-1/2 z-10">
               <img
                 src="images/sekai-yuiitsu.png"
                 alt=""
@@ -34,7 +34,7 @@ export const Hero = ({ language, content }: HeroProps) => {
                 }}
               />
             </div>
-            <h2 className={`text-2xl md:text-3xl lg:text-4xl mb-4 font-yumin mt-10 md:mt-16 lg:mt-24`}>
+            <h2 className={`text-2xl md:text-3xl lg:text-4xl mb-4 font-yumin mt-6 md:mt-16 lg:mt-24`}>
               {content.subtitle}
             </h2>
             <h1 className={`text-6xl md:text-7xl lg:text-8xl mb-5 font-yumin`}>
