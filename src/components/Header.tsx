@@ -43,11 +43,11 @@ export const Header = ({ language, setLanguage, content }: HeaderProps) => {
   return (
     <header className="bg-[#808000] text-white shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-14 md:h-20">
+        <div className="flex justify-between h-16 md:h-20">
           <div className="flex flex-col items-center md:items-start justify-center">
             <div className="text-sm md:text-base mb-1">{content.subtitle}</div>
             <h1 
-              className={`text-2xl md:text-3xl ${language === "ja" ? "font-yumin" : "font-playfair"} cursor-pointer`}
+              className={`text-xl md:text-3xl ${language === "ja" ? "font-yumin" : "font-playfair"} cursor-pointer`}
               onClick={() => navigate("/")}
             >
               {content.title}
