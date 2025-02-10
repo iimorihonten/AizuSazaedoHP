@@ -13,6 +13,42 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
+    id: "3",
+    title: "営業に関するお知らせ",
+    titleEn: "Notice Regarding Business Operations",
+    content: `会津さざえ堂、並びに飯盛本店は
+2月13日(木)より
+営業再開を予定しております⛄️
+
+落雪の状況次第では延期もあり得ますので
+その際は何卒ご容赦くださいますよう
+お願い申し上げます
+
+会津若松市内の道路状況も大変悪く
+あちらこちらで渋滞や事故が発生しています
+
+連日の除雪作業で
+心身ともに
+疲労が溜まってくる頃と思いますので
+皆さまご無理なさいませんように`,
+    contentEn: `Aizu Sazaedo and Iimori Main Store
+plan to resume operations
+from Thursday, February 13th ⛄️
+
+Please note that this may be postponed
+depending on the snow fall conditions.
+We appreciate your understanding.
+
+Road conditions in Aizu-Wakamatsu City are still very poor,
+with traffic jams and accidents occurring in various locations.
+
+As many people are likely becoming physically and mentally fatigued
+from the continuous snow removal work,
+please take care not to overexert yourselves.`,
+    date: "2025-02-11",
+    category: "important",
+  },
+  {
     id: "2",
     title: "2月9日、10日の臨時休業について",
     titleEn: "Temporary Closure on February 9th and 10th",
