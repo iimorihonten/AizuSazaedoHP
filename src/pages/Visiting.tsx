@@ -38,7 +38,7 @@ const Visiting = () => {
           content: "会津さざえ堂のパンフレットです。表裏の２頁、三つ折りになっております。\n下記PDFファイル名をクリック＆ダウンロード、印刷の上、ご利用下さい。",
           pdfLink: {
             text: "会津さざえ堂パンフレット.pdf",
-            url: "/AizuSazaedoHP/assets/会津さざえ堂パンフレット.pdf"
+            url: "assets/会津さざえ堂パンフレット.pdf"
           }
         }
       },
@@ -73,7 +73,7 @@ const Visiting = () => {
           content: "This is a pamphlet for Aizu Sazaedo. It consists of 2 pages (front and back) and is tri-folded.\nClick and download the PDF file below, and print it for your use.",
           pdfLink: {
             text: "Aizu Sazaedo Pamphlet.pdf",
-            url: "/AizuSazaedoHP/assets/会津さざえ堂パンフレット.pdf"
+            url: "assets/会津さざえ堂パンフレット.pdf"
           }
         }
       },
