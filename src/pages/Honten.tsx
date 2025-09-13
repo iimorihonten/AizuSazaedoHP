@@ -15,14 +15,14 @@ const Honten = () => {
         "最新の情報は、山主飯盛本店のインスタグラムにて掲載しております。",
         (
           <>
-            また、店内には、会津 1/3Cafe（さんぶんのいちカフェ）
+            また、店内には、
             <a
               href="https://www.instagram.com/mt_iimori3.1cafe?igsh=MTU1dGJnM3plM2oy"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#808000] hover:underline break-all"
+              className="text-[#808000] hover:underline"
             >
-              https://www.instagram.com/mt_iimori3.1cafe?igsh=MTU1dGJnM3plM2oy
+              会津 1/3Cafe（さんぶんのいちカフェ）
             </a>
             を併設しております。お越しの際は、ぜひご利用くださいませ。
           </>
@@ -36,15 +36,14 @@ const Honten = () => {
         "For the latest information and updates, please follow us on Iimori Honten Shop's Instagram account.",
         (
           <>
-            We also have an in-store cafe, Aizu 1/3 Cafe (Sanbun-no-Ichi Cafe):
-            {" "}
+            We also have an in-store cafe,{' '}
             <a
               href="https://www.instagram.com/mt_iimori3.1cafe?igsh=MTU1dGJnM3plM2oy"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#808000] hover:underline break-all"
+              className="text-[#808000] hover:underline"
             >
-              https://www.instagram.com/mt_iimori3.1cafe?igsh=MTU1dGJnM3plM2oy
+              Aizu 1/3 Cafe (Sanbun-no-Ichi Cafe)
             </a>
             . Please stop by when you visit.
           </>
