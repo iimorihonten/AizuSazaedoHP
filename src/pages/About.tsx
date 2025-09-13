@@ -45,7 +45,7 @@ const About = () => {
 
   const jaContent = [
     {
-      title: "会津さざえ堂について",
+      title: "会津さざえ堂とは",
       content: "会津さざえ堂は、1796年福島県会津若松市の飯盛山に建立された、高さ16.5メートル、六角三層のお堂です。正式名称は「円通三匝堂」（えんつうさんそうどう）といいます。当時飯盛山には正宗寺（しょうそうじ）というお寺があり、その住職であった僧郁堂（いくどう）の考案した建物です。"
     },
     {
@@ -110,7 +110,7 @@ const About = () => {
       <Header language={language} setLanguage={setLanguage} content={content[language]} />
       <main className="container mx-auto px-4 py-8 flex-1">
         <h1 className={`text-3xl font-bold mb-6 ${language === "ja" ? "font-yumin" : "font-playfair"}`}>
-          {language === "ja" ? "会津さざえ堂について" : "About Aizu Sazaedo"}
+          {language === "ja" ? "会津さざえ堂とは" : "About Aizu Sazaedo"}
         </h1>
 
         <div className="w-full max-w-4xl mx-auto">

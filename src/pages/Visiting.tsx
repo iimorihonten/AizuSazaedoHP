@@ -31,7 +31,7 @@ const Visiting = () => {
         },
         pets: {
           title: "ペット同伴での拝観について",
-          content: "- ペット用の抱っこ紐は必ずご使用ください\n- お客様の安全を確保するために両手が塞がらない状態でペット抱えた上でのご拝観をお願いいたします\n- ペットの安全を守るために踏まれたりすることを防ぐためにもご協力をお願いいたします\n- 他の参拝者への配慮をお願いいたします\n- 皆様が快適にお過ごしいただけるよう、ご理解とご協力をお願い申し上げます\n\nどうぞ、心静かに拝観をお楽しみください。"
+          content: "- ペット用の抱っこ紐を必ずご使用ください\n- お客様の安全を確保するため両手が塞がらない状態でペットを固定した上でご拝観ください\n- 他の参拝者へのご配慮をお願いいたします\n\nどうぞ、心静かにご拝観をお楽しみください。"
         },
         pamphlet: {
           title: "パンフレット",
@@ -66,7 +66,7 @@ const Visiting = () => {
         },
         pets: {
           title: "Guidelines for Visiting with Pets",
-          content: "- Pet carriers are mandatory\n- Please ensure you have one hand free while visiting for your safety\n- For your pet's safety, we ask for your cooperation to prevent them from being stepped on\n- Please be considerate of other visitors\n- We appreciate your understanding and cooperation in maintaining a comfortable environment for everyone\n\nPlease enjoy your peaceful visit to our temple."
+          content: "- Please use a pet carrier at all times\n- For your safety, please keep both hands free and secure your pet while visiting\n- Please be considerate of other visitors\n\nPlease enjoy a peaceful visit."
         },
         pamphlet: {
           title: "Pamphlet",
