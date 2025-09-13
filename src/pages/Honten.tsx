@@ -12,14 +12,16 @@ const Honten = () => {
       title: "山主飯盛本店",
       description: [
         "宇賀神堂の御朱印や会津さざえ堂に関する商品などを取り扱っております。",
-        "最新の情報は、山主飯盛本店のインスタグラムにて掲載しております。"
+        "最新の情報は、山主飯盛本店のインスタグラムにて掲載しております。",
+        "また、店内には、会津 1/3Cafe（さんぶんのいちカフェ）https://www.instagram.com/mt_iimori3.1cafe?igsh=MTU1dGJnM3plM2oy を併設しております。お越しの際は、ぜひご利用くださいませ。"
       ]
     },
     en: {
       title: "Iimori Honten Shop",
       description: [
         "We offer goshuin (temple stamps) from Ugajin-do and various items related to Aizu Sazaedo.",
-        "For the latest information and updates, please follow us on Iimori Honten Shop's Instagram account."
+        "For the latest information and updates, please follow us on Iimori Honten Shop's Instagram account.",
+        "We also have an in-store cafe, Aizu 1/3 Cafe (Sanbun-no-Ichi Cafe): https://www.instagram.com/mt_iimori3.1cafe?igsh=MTU1dGJnM3plM2oy. Please stop by when you visit."
       ]
     }
   };
