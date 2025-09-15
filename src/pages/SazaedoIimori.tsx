@@ -133,6 +133,17 @@ const SazaedoIimori = () => {
     ]
   };
 
+  // Merge the first two sections (1st + 2nd) into one, for both JA and EN
+  const getProcessedSections = (lang: "ja" | "en") => {
+    const arr = sections[lang];
+    if (!arr || arr.length < 2) return arr;
+    const merged = {
+      title: arr[0].title,
+      content: `${arr[0].content}\n\n${arr[1].content}`,
+    };
+    return [merged, ...arr.slice(2)];
+  };
+
   return (
     <div className="min-h-screen bg-stone-50 flex flex-col">
       <Header language={language} setLanguage={setLanguage} content={content[language]} />
@@ -142,31 +153,36 @@ const SazaedoIimori = () => {
             {language === "ja" ? "さざえ堂と飯盛家" : "Sazaedo and the Iimori Family"}
           </h1>
           <div className="w-full max-w-5xl mx-auto">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {sections[language].map((section, index) => (
-                  <CarouselItem key={index} className="md:basis-full">
-                    <Card className="bg-white h-full">
-                      <CardContent className="p-6">
-                        <h2 className={`text-2xl mb-4 ${language === "ja" ? "font-mincho" : "font-playfair"}`}>
-                          {section.title}
-                        </h2>
-                        <div className={`prose max-w-none whitespace-pre-line text-base leading-relaxed ${language === "ja" ? "font-yugothic" : "font-noto"}`}>
-                          {section.content}
-                        </div>
-                        <div className="mt-4 text-sm text-gray-500 text-center">
-                          {index + 1} / {sections[language].length}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex items-center justify-center gap-4 mt-4">
-                <CarouselPrevious className="relative left-0 right-0 translate-x-0" />
-                <CarouselNext className="relative left-0 right-0 translate-x-0" />
-              </div>
-            </Carousel>
+            {(() => {
+              const processed = getProcessedSections(language);
+              return (
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {processed.map((section, index) => (
+                      <CarouselItem key={index} className="md:basis-full">
+                        <Card className="bg-white h-full">
+                          <CardContent className="p-6">
+                            <h2 className={`text-2xl mb-4 ${language === "ja" ? "font-mincho" : "font-playfair"}`}>
+                              {section.title}
+                            </h2>
+                            <div className={`prose max-w-none whitespace-pre-line text-base leading-relaxed ${language === "ja" ? "font-yugothic" : "font-noto"}`}>
+                              {section.content}
+                            </div>
+                            <div className="mt-4 text-sm text-gray-500 text-center">
+                              {index + 1} / {processed.length}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="flex items-center justify-center gap-4 mt-4">
+                    <CarouselPrevious className="relative left-0 right-0 translate-x-0" />
+                    <CarouselNext className="relative left-0 right-0 translate-x-0" />
+                  </div>
+                </Carousel>
+              );
+            })()}
           </div>
         </div>
       </main>
