@@ -1,11 +1,28 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import path from "path";
+import * as path from "path";
 
-export default defineConfig({
-  base: process.env.CUSTOM_DOMAIN ? '/' : '/AizuSazaedoHP/',
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/AizuSazaedoHP/' : '/',
   server: {
-    port: 5180
+    port: 5180,
+    strictPort: true
+  },
+  preview: {
+    port: 5180,
+    strictPort: true
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    }
   },
   plugins: [react()],
   resolve: {
@@ -13,4 +30,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+}));

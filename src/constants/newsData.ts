@@ -13,6 +13,16 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
+    id: "5",
+    title: "【お知らせ】",
+    titleEn: "【Notice】",
+    content: "現在さざえ堂は雪害による\n入口屋根部分の緊急工事を行っており\n足場が掛けられた状態ですが\n通常通りご拝観頂けます。\n\n工事期間は3月末までの予定です。\n皆様には大変ご不便をおかけしますが\n何卒ご理解賜りますよう\nお願い申し上げます。",
+    contentEn: "Due to snow damage, Sazaedo is currently undergoing emergency repair work on the entrance roof.\nAlthough scaffolding is in place, you can still visit and tour the building as usual.\n\nThe construction is scheduled to last until the end of March.\nWe sincerely apologize for any inconvenience this may cause and appreciate your understanding.",
+    date: "2026-03-20",
+    category: "important",
+    imageUrl: getImagePath("/lovable-uploads/news-20260320.png"),
+  },
+  {
     id: "4",
     title: "【営業再開のお知らせ】",
     titleEn: "【Resumption of Business】",
