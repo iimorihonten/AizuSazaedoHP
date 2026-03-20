@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import * as path from "path";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/AizuSazaedoHP/' : '/',
+  base: process.env.CUSTOM_DOMAIN ? '/' : (mode === 'production' ? '/AizuSazaedoHP/' : '/'),
   server: {
     port: 5180,
     strictPort: true
