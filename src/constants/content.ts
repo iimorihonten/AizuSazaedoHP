@@ -26,7 +26,7 @@ export const content = {
       },
       access: {
         title: "アクセス",
-        content: "バス\nハイカラさん・あかべぇ「飯盛山下」下車、徒歩5分\n自動車\n磐越自動車道　会津若松ICより約15分\n弊社での駐車場のご用意はございません。\n飯盛山入口周辺のお店の駐車場、もしくは\n市営の駐車場をご利用の上お越しください。",
+        content: "バス\nハイカラさん・あかべぇ「飯盛山下」下車、徒歩7分\n自動車\n磐越自動車道　会津若松ICより約15分\n弊社での駐車場のご用意はございません。\n飯盛山入口周辺のお店の駐車場、もしくは\n市営の駐車場をご利用の上お越しください。",
       },
     },
   },
@@ -55,7 +55,7 @@ export const content = {
       },
       access: {
         title: "Access",
-        content: "By Bus:\nTake 'Haikara-san/Akabee' bus to 'Iimoriyama-shita' stop, 5-minute walk\nBy Car:\nAbout 15 minutes from Aizu Wakamatsu IC on Ban-etsu Expressway\nWe do not have our own parking lot.\nPlease use the parking lots of shops near the entrance of Mt. Iimoriyama\nor the municipal parking lot.",
+        content: "By Bus:\nTake 'Haikara-san/Akabee' bus to 'Iimoriyama-shita' stop, 7-minute walk\nBy Car:\nAbout 15 minutes from Aizu Wakamatsu IC on Ban-etsu Expressway\nWe do not have our own parking lot.\nPlease use the parking lots of shops near the entrance of Mt. Iimoriyama\nor the municipal parking lot.",
       },
     },
   },
