@@ -9,6 +9,7 @@ export interface NewsItem {
   date: string;
   category: "event" | "maintenance" | "important" | "other";
   imageUrl?: string;
+  fullImage?: boolean;   // 画像を通常の横長クロップではなく、できるだけ全体を表示したい場合に true
 }
 
 export const newsData: NewsItem[] = [
@@ -21,6 +22,7 @@ export const newsData: NewsItem[] = [
     date: "2026-04-10",
     category: "important",
     imageUrl: getImagePath("/lovable-uploads/news-20260410.png"),
+    fullImage: true,   // このお知らせだけは画像を大きく全景寄りで表示
   },
   {
     id: "5",
