@@ -3,7 +3,6 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { content } from "../constants/content";
 import { NewsCard } from "../components/NewsCard";
-import { ScrollArea } from "../components/ui/scroll-area";
 import { newsData } from "../constants/newsData";
 
 const News = () => {
@@ -17,13 +16,13 @@ const News = () => {
           {language === "ja" ? "お知らせ" : "News"}
         </h1>
         
-        <ScrollArea className="h-[600px] rounded-lg bg-white p-4">
+        <div className="max-h-[75vh] overflow-y-auto rounded-lg bg-white p-4 border">
           <div className="space-y-4">
             {newsData.map((item) => (
               <NewsCard key={item.id} news={item} language={language} />
             ))}
           </div>
-        </ScrollArea>
+        </div>
       </main>
       <Footer language={language} />
     </div>

@@ -13,6 +13,16 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
+    id: "6",
+    title: "【お知らせ】",
+    titleEn: "【Notice】",
+    content: "２０２６年３月より実施しておりました会津さざえ堂の緊急工事は２０２６年４月１０日に終えることが出来ました。\n工事期間中の皆様のご協力ありがとうございました。",
+    contentEn: "The emergency construction work on Aizu Sazaedo, which began in March 2026, was successfully completed on April 10, 2026.\nWe sincerely thank everyone for your cooperation and understanding during the construction period.",
+    date: "2026-04-10",
+    category: "important",
+    imageUrl: getImagePath("/lovable-uploads/news-20260410.png"),
+  },
+  {
     id: "5",
     title: "【お知らせ】",
     titleEn: "【Notice】",

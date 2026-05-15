@@ -60,7 +60,7 @@ export const NewsCard = ({ news, language }: NewsCardProps) => {
             <img
               src={news.imageUrl}
               alt={language === "ja" ? news.title : (news.titleEn || news.title)}
-              className="w-full h-48 object-cover rounded-lg"
+              className="w-full h-36 object-cover rounded-lg"
             />
           </div>
         )}
