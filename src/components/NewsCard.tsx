@@ -56,11 +56,11 @@ export const NewsCard = ({ news, language }: NewsCardProps) => {
       </CardHeader>
       <CardContent>
         {news.imageUrl && (
-          <div className="mb-4">
+          <div className="mb-4 bg-stone-100 rounded-lg overflow-hidden">
             <img
               src={news.imageUrl}
               alt={language === "ja" ? news.title : (news.titleEn || news.title)}
-              className="w-full h-36 object-cover rounded-lg"
+              className="w-full max-h-80 object-contain mx-auto"
             />
           </div>
         )}
