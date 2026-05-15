@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Bun (do not mix package managers - GitHub Actions and maintenance manual require npm)
+bun.lockb

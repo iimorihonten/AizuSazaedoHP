@@ -31,3 +31,18 @@ export default defineConfig(({ mode }) => ({
 ---
 
 以上のルールを守ってコード編集やAI（Agent）への指示を行うことで、安全にサイト更新を続けることができます。
+
+## 5. AI Code CLI (Grok / Claude Code / Cursor 等) による更新
+
+AI Code CLI エージェントを使用してメンテナンスを行う場合は、必ずリポジトリルートにある `AI-CLI-UPDATE-MANUAL.md` を事前コンテキストとして読み込ませてください。
+
+この手順書には以下の厳守事項が詳細に記載されています：
+
+- `vite.config.ts` の base 設定を固定パスに変更しない（CUSTOM_DOMAIN 判定を維持）
+- パッケージマネージャの混同を避け、npm のみ使用（package-lock.json を正しく更新）
+- お知らせ追加時は `src/constants/newsData.ts` の先頭に titleEn / contentEn 付きで追加
+- 画像は `public/lovable-uploads/` へ配置し `getImagePath("/lovable-uploads/...")` で参照
+- デプロイ前は **必ずローカルで `npm run build` を実行してエラー無きことを確認**
+- Push 後は GitHub Actions が自動デプロイ（追加コマンド不要）
+
+これにより、表示崩れやデプロイ失敗を防ぎ、安全に公式サイトを運用できます。
